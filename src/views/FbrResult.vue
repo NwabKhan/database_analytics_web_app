@@ -1,7 +1,7 @@
 <template>
     <div class="container mx-auto ">
         <h1 class=" text-center font-bold text-2xl text-blue-800 py-4 tracking-tight ">Searched Record in the FBR<br /> Database</h1>
-        <div class="flex flex-wrap bg-white rounded-xl shadow-lg p-4 mx-80">
+        <div class="flex flex-wrap bg-white text-gray-700 rounded-xl shadow-lg p-4 mx-80">
             <div class="mt-4 flex gap-4 w-1/2">
                 <label class="font-bold" for="employee_id">CNIC:</label>
                 <p>32122-1231231-1</p>
@@ -33,7 +33,7 @@
             <div class="mt-8 flex w-full justify-between">
                <div class=" flex gap-4 justify-center">
                 <button
-                  @click.prevent="searchFbr"
+                  @click.prevent="searchCnic"
                   class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
                   type="button"
                 >
@@ -48,7 +48,7 @@
                 </button>
                </div>
                 <button
-                  @click.prevent="searchCnic"
+                  @click.prevent="goBack"
                   class="bg-purple-500 hover:bg-purple-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
                   type="button"
                 >
@@ -70,10 +70,10 @@
         },
         methods: {
             searchCnic() {
-                this.$router.push({ name: 'home' });
+                this.$router.push({ name: 'cnic' });
             },
-            searchFbr() {
-                this.$router.push({ name: 'fbr' });
+            goBack() {
+                this.$router.push({ name: 'home' });
             },
             searchTelco() {
                 this.$router.push({ name: 'telco' });
