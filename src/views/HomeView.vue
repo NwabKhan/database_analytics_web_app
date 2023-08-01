@@ -20,7 +20,7 @@
           </div>
           <div class="flex items-center justify-between">
             <button
-              @click.prevent="searchRecord"
+              @click.prevent="searchNadra"
               class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
               type="button"
             >
@@ -38,6 +38,8 @@
 </template>
 
 <script >
+// import axios from "axios";
+
 export default {
   data() {
     return {
@@ -46,11 +48,11 @@ export default {
     };
   },
   methods: {
-    searchRecord() {
-      // Call your API here with this.cnic as the parameter
-      // Set the response to this.record
-      console.log("cnic: ", this.cnic)
-    },
+    // searchRecord() {
+    //   // Call your API here with this.cnic as the parameter
+    //   // Set the response to this.record
+    //   console.log("cnic: ", this.cnic)
+    // },
     formatCnic() {
       let cnic = this.cnic.replace(/[^0-9]/g, "");
       if (cnic.length > 5) {
@@ -61,6 +63,21 @@ export default {
       }
       this.cnic = cnic;
     },
+    async searchNadra(){
+      // try {
+      //   const response = await axios.get(`/api/search/${formattedCNIC}`);
+      //   const userFound = response.data.userFound;
+      //   if (userFound) {
+      //     this.$router.push({ name: 'search-result', params: { cnic: formattedCNIC, user: response.data.user } });
+      //   } else {
+      //     this.$router.push({ name: 'search-result', params: { cnic: formattedCNIC, userFound: false } });
+      //   }
+      // }catch(err){
+      // console.log("🚀 ~ file: HomeView.vue:68 ~ searchRecord ~ err:", err)
+      // }
+      this.$router.push({ name: 'cnic' });
+
+    }
   },
 };
 </script>
