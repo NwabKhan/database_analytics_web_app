@@ -5,7 +5,7 @@
       <div class="w-full max-w-md">
         <form class="bg-white shadow-lg rounded-lg px-8 pt-6 pb-8 mb-4">
           <div class="mb-4">
-            <label class="block text-gray-700 text-sm font-bold mb-4" for="cnic">
+            <label class="block text-gray-700 text-base font-semibold mb-4" for="cnic">
               Enter CNIC to Search
             </label>
             <input
@@ -82,15 +82,4 @@ export default {
 };
 </script>
 
-<style>
-body {
-  margin: 0; /* Remove default margin to avoid white space around the image */
-  padding: 0; /* Remove default padding to avoid white space around the image */
-  background-image:url('/bg.jpg'); /* Replace 'bg.jpg' with the actual image file name */
-  background-size: cover; /* Scale the background image to cover the whole page */
-  background-repeat: no-repeat;
-  /* Prevent the background image from repeating */
-  /* Optionally, you can set other background properties like background-position, background-attachment, etc. */
-}  
- </style>
 

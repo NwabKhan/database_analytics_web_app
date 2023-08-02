@@ -3,7 +3,7 @@
     <h1 class=" text-center font-bold text-2xl text-blue-800 py-4 tracking-tight ">Searched Record in the NADRA<br /> Database</h1>
     <div class="flex flex-wrap bg-white text-gray-700 rounded-xl shadow-lg p-4 mx-80">
         <div class="mt-4 flex gap-4 w-1/2">
-            <label class="font-bold     " for="employee_id">CNIC:</label>
+            <label class="font-bold" for="employee_id">CNIC:</label>
             <p>32122-1231231-1</p>
         </div>
         <div class="mt-4 flex gap-4 w-1/2">
